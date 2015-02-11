@@ -10,7 +10,7 @@
 		    <%= f.submit "Add todo", class: "btn btn-primary" %>
 		<%end%>
 		<% if !flash[:error].nil? %><br/>
-		 <div class="alert alert-error text-primary well">
+		 <div class="alert alert-error text-danger well">
 		    <button type="button" class="close" data-dismiss="alert" >×</button>
 		    <strong><%= flash[:error] %></strong>
 		    </div>
@@ -37,9 +37,9 @@
 				<%end %>
 			</div>
 		<br>
-		<a href="/todos/delete">Delete last todo</a>
-		
-
+		<a href="/todos/delete_first">Delete first todo</a> |
+		<a href="/todos/delete_last">Delete last todo</a> |
+		<a href="/todos/delete_all">Delete all todo</a>
 		</div> <!-- span4 -->
 	</div> <!-- row -->
 </div> <!-- container -->

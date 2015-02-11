@@ -4,8 +4,18 @@ class TodosController < ApplicationController
 	@new_todo = Todo.new
   end
 
-  def delete
+  def delete_last
   	t=Todo.last
+  	t.delete
+  end
+
+  def delete_first
+  	t=Todo.first
+  	t.delete
+  end
+
+  def delete_all
+  	t=Todo.all
   	t.delete
   end
 

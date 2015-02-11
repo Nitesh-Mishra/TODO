@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'todos/index'
-  get 'todos/delete'
+  get 'todos/delete_last'
+  get 'todos/delete_first'
+  get 'todos/delete_all'
   match "todos/add" => "todos#add", :via => :post
   match 'todos/complete' => 'todos#complete', :via => :post
   #match "todos/delete" => "todos#delete", :as => :delete
