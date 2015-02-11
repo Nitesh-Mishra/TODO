@@ -15,8 +15,7 @@ class TodosController < ApplicationController
   end
 
   def delete_all
-  	t=Todo.all
-  	t.delete
+  	Todo.delete_all
   end
 
   def add
