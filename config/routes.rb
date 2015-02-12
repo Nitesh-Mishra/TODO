@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'todos#index'
   get 'todos/index'
   get 'todos/delete_last'
   get 'todos/delete_first'
