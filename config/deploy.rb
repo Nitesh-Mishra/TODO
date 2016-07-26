@@ -2,8 +2,8 @@ require "bundler/capistrano"
 require "rvm/capistrano"
 require 'capistrano/sidekiq'
 
-set :whenever_command, "bundle exec whenever"
-require "whenever/capistrano"
+# set :whenever_command, "bundle exec whenever"
+# require "whenever/capistrano"
 
 set :application, "hash_tag_loyalty"
 set :repository, "git@github.com:Nitesh-Mishra/TODO.git"
