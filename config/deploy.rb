@@ -39,6 +39,7 @@ set :sync_directories, ["public/system"]
 # set :sidekiq_env, 'production'
 
 role :app, "52.220.57.231", "52.220.60.43"
+role :web, "52.220.57.231", "52.220.60.43"
 role :db,  "52.220.59.53", primary: true
 
 ssh_options[:paranoid] = false
