@@ -32,15 +32,14 @@ set :rvm_type, :user  # is default
 set :sync_backups, 3
 set :stage, :production
 set :sync_directories, ["public/system"]
-set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
+# set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
 
 # set :sidekiq_role, :app
 # set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
 # set :sidekiq_env, 'production'
 
-role :web, "52.220.57.231", "52.220.60.43"
-#role :app, server_name
-role :db,  "52.220.57.231", "52.220.60.43", primary: true
+role :app, "52.220.57.231", "52.220.60.43"
+role :db,  "52.220.59.53", primary: true
 
 ssh_options[:paranoid] = false
 default_run_options[:pty] = true
@@ -61,12 +60,12 @@ after 'deploy:update_code' do
   #run "chmod -R 777 #{release_path}/public/system"
 end
 
-task :add_default_hooks do
-  after 'deploy:starting', 'sidekiq:quiet'
-  after 'deploy:updated', 'sidekiq:stop'
-  after 'deploy:reverted', 'sidekiq:stop'
-  after 'deploy:published', 'sidekiq:start'
-end
+# task :add_default_hooks do
+#   after 'deploy:starting', 'sidekiq:quiet'
+#   after 'deploy:updated', 'sidekiq:stop'
+#   after 'deploy:reverted', 'sidekiq:stop'
+#   after 'deploy:published', 'sidekiq:start'
+# end
 
 namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do

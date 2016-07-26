@@ -14,10 +14,10 @@
 ActiveRecord::Schema.define(version: 20150211184709) do
 
   create_table "todos", force: :cascade do |t|
-    t.string   "todo_item"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean  "completed"
+    t.string   "todo_item",  limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.boolean  "completed",  limit: 1
   end
 
 end
