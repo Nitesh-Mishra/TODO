@@ -7,7 +7,7 @@ require "whenever/capistrano"
 
 set :application, "hash_tag_loyalty"
 set :repository, "git@github.com:Nitesh-Mishra/TODO.git"
-# set :server_name, "52.74.11.152"
+set :server_name, ["52.220.57.231", "52.220.60.43"]
 set :user, "ubuntu"
 set :scm_passphrase, ""
 set :runner, "ubuntu"
@@ -38,9 +38,9 @@ set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
 # set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
 # set :sidekiq_env, 'production'
 
-role :web, [52.220.57.231, 52.220.60.43]
+role :web, server_name
 #role :app, server_name
-role :db,  [52.220.57.231, 52.220.60.43], primary: true
+role :db,  server_name, primary: true
 
 ssh_options[:paranoid] = false
 default_run_options[:pty] = true
