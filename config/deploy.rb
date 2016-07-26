@@ -7,7 +7,7 @@ require 'capistrano/sidekiq'
 
 set :application, "hash_tag_loyalty"
 set :repository, "git@github.com:Nitesh-Mishra/TODO.git"
-set :server_name, ["52.220.57.231", "52.220.60.43"]
+set :server_name, "52.220.57.231", "52.220.60.43"
 set :user, "ubuntu"
 set :scm_passphrase, ""
 set :runner, "ubuntu"
