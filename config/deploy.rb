@@ -38,9 +38,9 @@ set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
 # set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
 # set :sidekiq_env, 'production'
 
-role :web, []
+role :web, [52.220.57.231, 52.220.60.43]
 #role :app, server_name
-role :db,  [], primary: true
+role :db,  [52.220.57.231, 52.220.60.43], primary: true
 
 ssh_options[:paranoid] = false
 default_run_options[:pty] = true
