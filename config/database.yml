@@ -29,6 +29,6 @@ production:
   <<: *default
   database: todo_production
   host: 52.220.59.53
-  username: root
-  password: root123
+  username: hashtag
+  password: hashtag123
   

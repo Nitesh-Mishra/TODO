@@ -22,8 +22,8 @@ set :deploy_to, "/home/ubuntu/sites/#{application}"
 # set :apache_site_folder, "/etc/nginx/sites-enabled"
 set :migrate_target, :current
 
-set :db_user, "root"
-set :db_pass, "root123"
+set :db_user, "hashtag"
+set :db_pass, "hashtag123"
 
 set :rvm_ruby_string, ENV["GEM_HOME"].gsub(/.*\//,"")
 set :rvm_ruby_string, "ruby-1.9.3-p551"
