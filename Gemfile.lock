@@ -102,6 +102,7 @@ GEM
       execjs
     coffee-script-source (1.9.0)
     columnize (0.9.0)
+    concurrent-ruby (1.1.10)
     connection_pool (2.2.0)
     debug_inspector (0.0.2)
     debugger (1.6.8)
@@ -118,7 +119,8 @@ GEM
     highline (1.7.3)
     hike (1.2.3)
     hitimes (1.2.2)
-    i18n (0.7.0)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
